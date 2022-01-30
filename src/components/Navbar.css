@@ -1,0 +1,106 @@
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    margin: 5px;
+}
+
+.navbar-leftside{
+    display:flex;
+    justify-content:space-between;
+}
+
+.leftside{
+    color:#fff;
+    margin: 0 4px 5px 0;
+    padding:10px;
+    cursor: pointer;
+}
+
+.navbar-center::before{
+    content: "";
+    background-image: url(https://a.trellocdn.com/prgb/dist/images/header-logo-spirit-loading.87e1af770a49ce8e84e3.gif);
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    position: absolute;
+    display: block;
+    top: 0;
+    height:5%;
+    width:5rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.navbar-center:hover{
+    opacity: 0.9
+}
+
+.btn{
+    border-radius: 3px;
+    border:none;
+    padding: 0 12px;
+    color:#fff;
+    font-weight: bold;
+    height: 2rem;
+    margin: 0 7px 0 0;
+    cursor: pointer;
+    font-size:14px;
+}
+
+.signup{
+    background: linear-gradient(to bottom, #61BD4F 0%, #5AAC44 100%);
+}
+.login{
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+}
+
+.signup:hover, .login:hover,.signup-free:hover{
+    opacity: 0.9;
+}
+
+header{
+    background: #faf3c0;
+    border-bottom: 1px solid #e6c60d;
+    color: #172b4d;
+    display:flex;
+    justify-content:center;
+    height:3.5rem;
+}
+
+.signup-free{
+    background-color: #0079bf;
+    border:none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin-left: 5px;
+}
+
+.content{
+    display:flex;
+    justify-content:space-between;
+    margin: 5px;
+}
+
+.content-left{
+    display:flex;
+    color: #fff;
+}
+
+.line{
+    border-left: 1px solid rgba(255, 255, 255, 0.692);
+    height:18px;
+    margin: 8px 9px 10px 7px;
+}
+
+.content-right{
+    display: flex;
+}
+
+.name{
+    padding: 0px 13px;
+    margin: 0px 0px 12px;
+    line-height:28px;
+}
