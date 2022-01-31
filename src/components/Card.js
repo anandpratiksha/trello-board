@@ -21,13 +21,13 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Card = () => {
+const Card = ({ card }) => {
     const classes = useStyles();
     return (
         <div>
             <Paper className={classes.card}>
                 <div className={classes.progress}></div>
-                <Typography className={classes.todo}>HelpDesk call AA9999</Typography>
+                <Typography className={classes.todo}>{card.content}</Typography>
             </Paper>
         </div>
     )
