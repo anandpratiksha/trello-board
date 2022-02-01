@@ -10,11 +10,29 @@ const useStyles = makeStyles((theme) => ({
     icon: {
         width: '1.2rem',
         height: '1.2rem',
-        marginTop: '5px',
+        margin: '5px',
+        color: '#fff'
     },
     avatar: {
         width: '2rem',
-        height: '2rem'
+        height: '2rem',
+        margin: '5px',
+    },
+    abc: {
+        display: 'flex',
+        justifyContent: 'center',
+        borderRadius: '3px',
+        margin: '5px',
+        padding: '3px',
+        cursor: 'pointer',
+        background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2))',
+    },
+    Public: {
+        marginTop: '5px',
+        padding: '1px',
+        color: '#fff',
+        fontSize: '14px',
+        fontWeight: 'bold',
     }
 }));
 
@@ -41,14 +59,23 @@ const Navbar = () => {
                 <div className="content-left">
                     <h3 className="name">Kanban Board</h3>
                     <div className="line"></div>
-                    <button className="btn login"><PublicIcon className={classes.icon} /> Public</button>
+                    <div className={classes.abc}>
+                        <PublicIcon className={classes.icon} />
+                        <div className={classes.Public}>Public</div>
+                    </div>
                     <div className="line"></div>
                     <Avatar className={classes.avatar}>AH</Avatar>
                 </div>
                 <div className="content-right">
                     <div className="line"></div>
-                    <button className="btn login"><FilterListIcon className={classes.icon} /> Filter</button>
-                    <button className="btn login"><MoreHorizIcon className={classes.icon} /> Show Menu</button>
+                    <div className={classes.abc}>
+                        <FilterListIcon className={classes.icon} />
+                        <div className={classes.Public}>Filter</div>
+                    </div>
+                    <div className={classes.abc}>
+                        <MoreHorizIcon className={classes.icon} />
+                        <div className={classes.Public}>Show Menu</div>
+                    </div>
                 </div>
             </div>
         </div>

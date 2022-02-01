@@ -1,6 +1,7 @@
 import React from 'react'
 import { Paper, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
+import { Draggable } from 'react-beautiful-dnd';
 
 const useStyles = makeStyles((theme) => ({
     card: {
@@ -8,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
         margin: theme.spacing(1),
     },
     progress: {
-        // float: 'left',
+        // float: 'left', 
         width: '50px',
         height: '5px',
         backgroundColor: '#0079bf',
@@ -21,15 +22,23 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const Card = ({ card }) => {
+const Card = ({ card, index }) => {
     const classes = useStyles();
     return (
-        <div>
-            <Paper className={classes.card}>
-                <div className={classes.progress}></div>
-                <Typography className={classes.todo}>{card.content}</Typography>
-            </Paper>
-        </div>
+        <Draggable draggableId={card.id} index={index} key={card.id}>
+            {(provided) => (
+                <div
+                    ref={provided.innerRef}
+                    {...provided.dragHandleProps}
+                    {...provided.draggableProps}
+                >
+                    <Paper className={classes.card}>
+                        <div className={classes.progress}></div>
+                        <Typography className={classes.todo}>{card.content}</Typography>
+                    </Paper>
+                </div>
+            )}
+        </Draggable>
     )
 }
 
